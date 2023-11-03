@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+    <div class="imagen-head">
+    </div>
+</head>
+<body>
+<div>
+    <img src="static/ujed.png" class="imagen-head">
+    <section class="contenedor">
+        <header>Inicio de Sesion</header>
+        <form method="POST" class="formulario">
+            {% csrf_token %}
+            <div class="entrada">
+                <label for="nombre_usuario">Nombre de usuario:</label>
+                <input type="text" name="nombre_usuario" required>
+            </div>
+
+            <div class="entrada">
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <div class="footer">
+        <p> Contactos</p>
+        <p> Telefono: (618) 927 12 00</p>
+        <p> Correo electronico: atencionusuarios@ujed.mx</p>
+    </div>
+</div>    
+</body>
+</html>
